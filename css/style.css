@@ -1,4 +1,43 @@
+.kotak1 {
+    width: 49.5vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: geser 1.5s 2s forwards;
+    border: 5px solid white;
+}
 
+.kotak2 {
+    width: 49.5vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: geserlagi 1.5s 2s forwards;
+    right: 0;
+    border: 5px solid white;
+}
+
+@keyframes geser {
+    0% {
+        transform: translatex(0px)
+    }
+
+    100% {
+        transform: translatex(-1366px);
+    }
+}
+
+@keyframes geserlagi {
+    0% {
+        transform: translatex(0px)
+    }
+
+    100% {
+        transform: translatex(1366px);
+    }
+}
 
 /* bg */
 /* 6) Basic Landscape Background Animation
