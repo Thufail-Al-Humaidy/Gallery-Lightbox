@@ -1,0 +1,595 @@
+/* intro */
+.kotak1 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .8);
+    animation: geser 1.5s 2s forwards;
+    /* border: 1px solid black; */
+}
+
+.kotak2 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 115px;
+    animation: geserlagi 1.5s 2s forwards;
+    /* border: 1px solid white; */
+}
+
+.kotak3 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .8);
+    margin-top: 230px;
+    animation: geser 1.5s 2s forwards;
+    /* border: 1px solid black; */
+}
+
+.kotak4 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 345px;
+    animation: geserlagi 1.5s 2s forwards;
+    /* border: 1px solid white; */
+}
+
+.kotak5 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .8);
+    margin-top: 460px;
+    animation: geser 1.5s 2s forwards;
+    /* border: 1px solid black; */
+}
+
+.kotak6 {
+    width: 1366px;
+    height: 115px;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 575px;
+    animation: geserlagi 1.5s 2s forwards;
+    /* border: 1px solid white; */
+}
+
+@keyframes geser {
+    0% {
+        transform: translatex(0px)
+    }
+
+    100% {
+        transform: translatex(-1366px);
+    }
+}
+
+@keyframes geserlagi {
+    0% {
+        transform: translatex(0px)
+    }
+
+    100% {
+        transform: translatex(1366px);
+    }
+}
+
+/* bg */
+/* 6) Basic Landscape Background Animation
+background ini diambil dari https: //alvarotrigo.com/blog/animated-backgrounds-css/ */
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    -webkit-animation: slidein 20s;
+    animation: slidein 20s infinite;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    /* animation: slidein 10s infinite alternate-reverse; */
+}
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+.center {
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+/* bg end */
+/* tema */
+
+.judul{
+    width: 500px;
+    height: 100px;
+    background-color: rgba(0, 0, 0,.6);
+    margin: -3px auto;
+    border: 2px solid rgb(0, 0, 0) ;
+    border-radius: 0px 0px 50px 50px;
+    animation: bawah 1s 3s forwards;
+    opacity: 0;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255,.5);
+}
+@keyframes bawah{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(121, 3, 255,.8);
+    letter-spacing: 9px;
+    animation: nurun 2s 4s forwards;
+    opacity: 0;
+}
+
+@keyframes nurun {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.quote{
+    margin: 50px auto;
+    width: 850px;
+    padding: 9px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(53, 53, 53, 0.4);
+    box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    animation: muncul 2s 5s forwards;
+    opacity: 0;
+}
+@keyframes muncul {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* tema end */
+/* gallery  */
+.container {
+    width: 600px;
+    /* background-color: rgba(0, 0, 0, .8); */
+    padding: 15px ;
+    box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 90px auto;
+    overflow: scroll;
+    background-image: url(../img/nature5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position-y:-180px;
+    /* salah setelah dikasih animasi  */
+    /* animation: muncul 2s 6s forwards;
+    opacity: 0; */
+}
+.container::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background: blue;
+    border-radius: 50px;
+}
+
+.container::-webkit-scrollbar-track:horizontal{
+    background: white;
+
+}
+
+.gallery {
+    width: 750px;
+}
+
+.gallery li {
+    width: 120px;
+    height: 120px;
+    /* overflow: hidden; */
+    border: 5px solid #666;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    border-radius: 50%;
+    list-style: none;
+}
+
+.gallery li .bulet {
+    border-radius: 50%;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: white;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.clear {
+    clear: both;
+}
+/* gallery end */
+
+/* overlay */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .0);
+    z-index: 99;
+    transition: 0.5s;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 255, 170, 0.3);
+    border: 1px solid aquamarine;
+}
+
+.overlay:target img {
+    animation: zoomandfade .5s;
+}
+@keyframes zoomandfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.overlay .close {
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    left: 63%;
+    margin-left: -20px;
+    color: white;
+    text-decoration: none;
+    /* background-color: black; */
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    line-height: 15px;
+    padding: 9px;
+    opacity: 0;
+}
+
+.overlay .inpo {
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    top: 50px;
+    left: 63%;
+    margin-left: -360px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    line-height: 10px;
+    padding: 9px;
+    opacity: 0;
+}
+
+.overlay:target .inpo,.overlay:target .close {
+    animation: slidedownfade .5s .5s forwards;
+}
+@keyframes slidedownfade {
+    0% {
+        margin-top: -20px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+
+.inpo:hover {
+    background-image: linear-gradient(#bdc3c7,#2c3e50);
+    color: red;
+
+}
+.close:hover{
+    color: red;
+    
+}
+
+.overlay:target .next,
+.overlay:target .back {
+    animation: fade .5s .5s forwards;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* navigasi */
+.next,
+.back {
+    width: 50px;
+    height: 85px;
+    background-image: url(../img/next5.png);
+    position: absolute;
+    text-indent: -9999px;
+    top: 40%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.back {
+    background-image: url(../img/back5.png);
+    margin-left: -100px;
+}
+/* navigasi end */
+
+.maps {
+    width: 200px;
+    height: 40px;
+    background-color: aquamarine;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 90;
+    bottom: 80px;
+    margin-left: 590px;
+    animation: copy 3s ;
+}
+
+.maps a{
+    line-height: 40px;
+    text-decoration: none;
+    font-family: 'Croissant One', cursive;
+    color: black;
+}
+.maps:hover{
+    background-color: aqua;
+}
+/* overlay end */
+
+
+/* footer */
+
+.footer {
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0,.8);
+    animation: atas 2s 6s forwards;
+    opacity: 0;
+}
+@keyframes atas {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer .copy {
+    /* margin-top: 5px; */
+    color: #eaeaea;
+    font-size: 16px;
+    text-align: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e3e3;
+    margin-left: 15px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+.social-icons {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.social-icons i,
+.social i {
+    color: #000000;
+}
+
+.social-icons a:hover {
+    background-color: #000000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+
+.social-icons a:hover i,
+.social a:hover i {
+    color: #FFFFFF;
+    transition: all ease 0.5s;
+}
+
+/* footer end */
+
+/* social samping */
+.social {
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    /* transform: translateY(-50%); */
+    animation: social 1s 5s forwards;
+    opacity: 0;
+}
+@keyframes social {
+    0% {
+        transform: translatex(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.social a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    background-color: rgba(255, 255, 255,.8);
+    border: 1px solid #CBCBCB;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social a:hover {
+    background-color: #000000;
+    transition: all ease 0.5s;
+}
+.social a:hover i{
+    color: white;
+}
+
+.social i {
+    font-size: 20px;
+    color: #2B2B2B;
+}
+/* social samping end */
+
+/* @keyframes kata {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+
+    80% {
+        background-color: rgba(204, 0, 255, 0.3);
+    }
+
+    100% {
+        transform: translateY(-10px);
+        background-color: rgba(0, 162, 255, .3);
+    }
+} */
+
+
+
+
+
+
+
+
